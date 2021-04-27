@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { db } from "./firebase";
 import './Orders.css'
+import { Link } from 'react-router-dom'
 import { useStateValue } from "./StateProvider";
 import Order from './Order'
 
@@ -35,6 +36,11 @@ function Orders() {
                 {orders?.map(order => (
                     <Order order={order} />
                 ))}
+            </div>
+            <div className="orders__button" ><Link to="/">
+             <button  > 
+             Shop More</button>
+             </Link>
             </div>
         </div>
     )
